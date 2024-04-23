@@ -1,0 +1,7 @@
+{
+  "name": "smart4allng-frontend",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
