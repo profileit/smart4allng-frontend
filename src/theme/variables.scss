@@ -1,39 +1,10 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
 
-$font-path: "../assets/fonts/";
 
-@mixin font-face($font-family-name, $file-name) {
-    @font-face {
-      font-family: $font-family-name;
-      src: url("#{$font-path}#{$file-name}.ttf");
-    }
-}
-
-@include font-face(ubuntu-regular, 'Ubuntu-Regular');
-@include font-face(ubuntu-medium, 'Ubuntu-Medium');
-@include font-face(ubuntu-bold, 'Ubuntu-Bold');
 
 :root {
     --ion-background-color: #F5FBFF;
-    
-    --ion-text-color: #626463
-    
-    /*
-    sidebar bg: EBF6FE
-    grey title 424150
-    yellow: EE9F2E
-    petrol: 0274B3
-    navy: 022C4E
-    aqua: 58C0D4
-    rust: CE542C
-    darkaqua: 1A8289
-    lightblue: 41A0E5
-    button outline 3677A6
-    user bg: EBF6FE*/
-
+    --ion-text-color: #626463;
+    --ion-font-family: 'Ubuntu-Regular'
 }
-
-// $background-sidebar: #EBF6FE;
-
-// $font-family-ubuntu-regular: 'Ubuntu-Regular'

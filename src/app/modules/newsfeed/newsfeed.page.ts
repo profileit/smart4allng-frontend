@@ -1,5 +1,8 @@
-import { Component, inject, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+
+import { Component,  OnInit } from '@angular/core';
+import { News } from 'src/app/shared/interfaces/News';
+import { newsFeedService} from './newsfeed.services';
+import { mockedUserList } from 'src/mocks/UserMock';
 
 @Component({
   selector: 'app-newsfeed',
@@ -7,11 +10,20 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./newsfeed.page.scss'],
 })
 export class NewsfeedPage implements OnInit {
-//   public folder!: string;
-  private activatedRoute = inject(ActivatedRoute);
-  constructor() {}
+  
+  newslist: News[] = [];
+  
+  constructor(public newsService: newsFeedService) {}
 
   ngOnInit() {
-    // this.folder = this.activatedRoute.snapshot.paramMap.get('id') as string;
+    this.newsService.getNews()
+    .subscribe({
+      next: (response: News[]) => {
+        this.newslist = response;
+      },
+      error: (error)=> {
+        console.log(error)
+      }
+    });
   }
 }

@@ -35,10 +35,20 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+/*ITCSS */
+@import 'theme/settings.scss';
+@import 'theme/tools.scss';
+@import 'theme/generic.scss';
+@import 'theme/elements.scss';
+@import 'theme/objects.scss';
+@import 'theme/components.scss';
+@import 'theme/utilities.scss';
 @import 'theme/variables.scss';
 
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Ubuntu-Bold';
+    color: $color-primary
 }
 
 h1 {
