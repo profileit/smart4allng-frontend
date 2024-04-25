@@ -35,3 +35,12 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+@import 'theme/variables.scss';
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Ubuntu-Bold';
+}
+
+h1 {
+    font-size: 2.5rem;
+}

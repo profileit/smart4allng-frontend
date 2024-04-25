@@ -117,3 +117,13 @@ ion-note {
 ion-item.selected {
   --color: var(--ion-color-primary);
 }
+
+
+// 
+
+ion-list-header {
+  img {
+    width: 216px;
+    display: inline-block;
+  }
+}
