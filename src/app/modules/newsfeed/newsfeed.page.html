@@ -1,0 +1,14 @@
+<ion-content [scrollEvents]="true" fullscreen="true" #scrollArea>
+    <h1>My Newsfeed</h1>
+    <ion-card *ngFor="let new of newslist" class="sf-card">
+        <ion-card-header>
+          <ion-card-title>{{new.title}}</ion-card-title>
+          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          {{new.content}}
+        </ion-card-content>
+      </ion-card>
+      
+</ion-content>

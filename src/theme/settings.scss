@@ -1,0 +1,33 @@
+/*declaración de variables y otras declaraciones de los preprocesadores.*/
+
+$font-path: "../assets/fonts/";
+
+@mixin font-face($font-family-name, $file-name) {
+    @font-face {
+      font-family: $font-family-name;
+      src: url("#{$font-path}#{$file-name}.ttf");
+    }
+}
+
+@include font-face(ubuntu-regular, 'Ubuntu-Regular');
+@include font-face(ubuntu-medium, 'Ubuntu-Medium');
+@include font-face(ubuntu-bold, 'Ubuntu-Bold');
+
+
+/*COLORS */
+
+$color-white: #fff;
+$color-primary: #022C4E;
+$color-secondary:  #EE9F2E;
+$color-tertiary:  #58C0D4;
+
+$color-tag-primary: #0274B3;
+$color-tag-secondary: #CE542C;
+$color-tag-tertiary: #1A8289;
+$color-tag-quaternary: #41A0E5;
+
+$color-sidebar-bg: #EBF6FE;
+$color-user-bg: #EBF6FE;
+$color-button-outline: #3677A6;
+
+$color-title-grey: #424150;
