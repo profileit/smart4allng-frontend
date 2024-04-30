@@ -4,6 +4,7 @@
     height: 20px;
     line-height: 20px;
     padding: 0 0.5rem;
+    white-space: nowrap;
     
     &.news {
         background-color: var(--sf-color-secondary);

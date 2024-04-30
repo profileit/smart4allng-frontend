@@ -1,19 +1,19 @@
 /*los mixins y funciones*/
 
-@mixin phone {
-    @media (max-width: $breakpoint-phone) {
+@mixin phoneL {
+    @media (min-width: $breakpoint-phone) {
       @content;
     }
 }
 
 @mixin tablet {
-    @media (min-width: $breakpoint-phone) and  (max-width: $breakpoint-tablet) {
+    @media (min-width: $breakpoint-tablet){
       @content;
     }
 }
 
 @mixin laptop {
-    @media (min-width: $breakpoint-tablet) and  (max-width: $breakpoint-laptop) {
+    @media (min-width: $breakpoint-laptop) {
       @content;
     }
 }

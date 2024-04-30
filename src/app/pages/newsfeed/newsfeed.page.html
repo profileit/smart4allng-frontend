@@ -1,6 +1,9 @@
-<ion-content [scrollEvents]="true" fullscreen="true" #scrollArea>
+<sf-header></sf-header>
+
+<ion-content [scrollEvents]="true" fullscreen="true" #scrollArea >
+  <div class="sf-newsfeed sf-page">
     <h1>My Newsfeed</h1>
-    <div class="sf-newsfeed__cards-container">
+    <div class="sf-newsfeed__cards-container ">
       <ion-card *ngFor="let new of newslist" class="sf-newsfeed__card">
         <ion-card-header>
           <img class="sf-newsfeed__card-avatar" [alt]="new.author.name" [src]="new.author.avatar" />
@@ -43,4 +46,5 @@
         </div>
       </ion-card>
     </div>
+  </div>
 </ion-content>

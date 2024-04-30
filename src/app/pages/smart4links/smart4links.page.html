@@ -1,0 +1,30 @@
+<sf-header></sf-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">smart4links</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div class="sf-smartlinks__container sf-page ">
+    <div>
+      <p class="h1">Smart4 Links</p>
+      <ion-card class="sf-smartlink__card">
+        <a *ngFor="let link of links;let i=index" trackBy="trackByFn(index, link)" class="sf-smartlink__card-link" [href]="link.url" target="_blank">
+          <img [src]="link.image" [alt]="link.title" />
+          <p>{{link.title}}</p>
+        </a>
+      </ion-card>
+    </div>
+    
+    <div>
+      <p class="h1">Social Links</p>
+      <ion-card class="sf-smartlink__card">
+        <a *ngFor="let link of socialLinks;let i=index" trackBy="trackByFn(index, link)" class="sf-smartlink__card-link" [href]="link.url" target="_blank">
+          <img [src]="link.image" [alt]="link.title" />
+          <p>{{link.title}}</p>
+        </a>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

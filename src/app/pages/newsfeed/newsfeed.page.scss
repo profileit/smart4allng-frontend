@@ -1,7 +1,10 @@
 
+
+
 .sf-newsfeed {
+    
     &__cards-container {
-        align-items: flex-start;
+        align-items: stretch;
         display: flex;
         flex-wrap: wrap;
         gap: 1.5rem;
@@ -68,6 +71,7 @@
         
         &-badges {
             display: flex;
+            flex-wrap: wrap;
             gap: 0.5rem;
             padding: 0 1rem;
         }

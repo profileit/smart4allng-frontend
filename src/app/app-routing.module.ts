@@ -4,17 +4,17 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'newsfeed',
     pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
-  },
-  {
     path: 'newsfeed',
-    loadChildren: () => import('./modules/newsfeed/newsfeed.module').then( m => m.NewsfeedPageModule)
-  }
+    loadChildren: () => import('./pages/newsfeed/newsfeed.module').then( m => m.NewsfeedPageModule)
+  },  {
+    path: 'smart4links',
+    loadChildren: () => import('./pages/smart4links/smart4links.module').then( m => m.Smart4linksPageModule)
+  },
+
 ];
 
 @NgModule({

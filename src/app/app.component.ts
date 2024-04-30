@@ -6,12 +6,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Newsfeed', url: '/newsfeed', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/spam', icon: 'warning' },
+    { title: 'Newsfeed', url: '/newsfeed', icon: 'newspaper' },
+    { title: 'Smart4Links', url: '/smart4links', icon: 'grid' },
+    { title: 'Smart4Play', url: '/smart4play', icon: 'ribbon' },
+    { title: 'Challenges', url: '/smart4play/challange', icon: 'ribbon' },
+    { title: 'Events', url: '/events', icon: 'calendar' },
   ];
   constructor() {}
 }
