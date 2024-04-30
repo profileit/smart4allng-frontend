@@ -1,14 +1,46 @@
 <ion-content [scrollEvents]="true" fullscreen="true" #scrollArea>
     <h1>My Newsfeed</h1>
-    <ion-card *ngFor="let new of newslist" class="sf-card">
+    <div class="sf-newsfeed__cards-container">
+      <ion-card *ngFor="let new of newslist" class="sf-newsfeed__card">
         <ion-card-header>
-          <ion-card-title>{{new.title}}</ion-card-title>
-          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+          <img class="sf-newsfeed__card-avatar" [alt]="new.author.name" [src]="new.author.avatar" />
+          <div>
+            <div class="sf-newsfeed__card-user">
+              <p class="sf-newsfeed__card-user-name">{{new.author.name}} {{new.author.surname}}</p>
+              <p class="sf-newsfeed__card-user-position">{{new.author.position}}</p>
+            </div>
+          </div>
+          <div class="sf-newsfeed__card-tag" *ngIf="new.isNew"><sf-tag tagText="New" tagType="news"></sf-tag></div>
         </ion-card-header>
-      
+        <div class="sf-newsfeed__card-badges">   
+          <sf-tag *ngFor="let badge of new.badges" [tagText]="badge.text" [tagType]="badge.color"></sf-tag>
+        </div>
         <ion-card-content>
-          {{new.content}}
+          <ion-card-title class="h5">{{new.title}}</ion-card-title>
+          <div>{{new.content}}</div>
         </ion-card-content>
+        
+         <img class="sf-newsfeed__card-img" [alt]="new.title" [src]="new.image" />
+         
+        <div class="sf-newsfeed__card-social">
+          
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="thumbs-up">
+                <path id="Vector"
+                    d="M7.33341 21.3334H4.53341C4.03834 21.3334 3.56355 21.1367 3.21348 20.7867C2.86341 20.4366 2.66675 19.9618 2.66675 19.4667V12.9334C2.66675 12.4383 2.86341 11.9636 3.21348 11.6135C3.56355 11.2634 4.03834 11.0667 4.53341 11.0667H7.33341M13.8667 9.20008V5.46675C13.8667 4.72414 13.5717 4.01195 13.0466 3.48685C12.5215 2.96175 11.8094 2.66675 11.0667 2.66675L7.33341 11.0667V21.3334H17.8614C18.3116 21.3385 18.7484 21.1807 19.0915 20.8892C19.4345 20.5976 19.6606 20.1919 19.7281 19.7467L21.0161 11.3467C21.0567 11.0792 21.0386 10.8061 20.9632 10.5462C20.8878 10.2863 20.7567 10.046 20.5791 9.84176C20.4016 9.63757 20.1818 9.47442 19.9349 9.36362C19.688 9.25282 19.42 9.19702 19.1494 9.20008H13.8667Z"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+          </svg>
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="Group 184">
+                <rect id="Rectangle 52" x="1" y="1" width="26" height="26" rx="2" stroke="currentColor"
+                    stroke-width="2" />
+                <path id="Salir"
+                    d="M16.9999 24C17.2651 24 17.5194 23.8946 17.707 23.7071C17.8945 23.5196 17.9998 23.2652 17.9998 23C17.9998 22.7348 17.8945 22.4804 17.707 22.2929C17.5194 22.1054 17.2651 22 16.9999 22H8.66662C7.95938 22 7.28111 21.719 6.78102 21.219C6.28093 20.7189 5.99998 20.0406 5.99998 19.3333V8.66667C5.99998 7.95942 6.28093 7.28115 6.78102 6.78105C7.28111 6.28095 7.95938 6 8.66662 6H16.9999C17.2651 6 17.5194 5.89464 17.707 5.70711C17.8945 5.51957 17.9998 5.26522 17.9998 5C17.9998 4.73478 17.8945 4.48043 17.707 4.29289C17.5194 4.10536 17.2651 4 16.9999 4H8.66662C7.42895 4 6.24198 4.49167 5.36682 5.36683C4.49166 6.242 4 7.42899 4 8.66667V19.3333C4 20.571 4.49166 21.758 5.36682 22.6332C6.24198 23.5083 7.42895 24 8.66662 24H16.9999ZM18.3212 8.932C18.4176 8.84286 18.5307 8.77359 18.654 8.72816C18.7772 8.68273 18.9082 8.66202 19.0394 8.66722C19.1707 8.67242 19.2996 8.70343 19.4189 8.75847C19.5381 8.81351 19.6454 8.8915 19.7345 8.988L23.7345 13.3213C23.9052 13.5061 24 13.7484 24 14C24 14.2516 23.9052 14.4939 23.7345 14.6787L19.7345 19.012C19.5543 19.2067 19.3042 19.3218 19.0392 19.332C18.7741 19.3423 18.5158 19.2468 18.3212 19.0667C18.1265 18.8865 18.0114 18.6364 18.0011 18.3713C17.9909 18.1063 18.0863 17.848 18.2665 17.6533L20.7171 14.9987H10.3333C10.068 14.9987 9.8137 14.8933 9.62616 14.7058C9.43863 14.5182 9.33327 14.2639 9.33327 13.9987C9.33327 13.7334 9.43863 13.4791 9.62616 13.2916C9.8137 13.104 10.068 12.9987 10.3333 12.9987H20.7158L18.2652 10.344C18.176 10.2475 18.1068 10.1344 18.0613 10.0112C18.0159 9.88796 17.9952 9.75698 18.0004 9.62573C18.0056 9.49449 18.0366 9.36555 18.0916 9.24629C18.1467 9.12703 18.2247 9.01978 18.3212 8.93067V8.932Z"
+                    fill="currentColor" />
+            </g>
+          </svg>
+        </div>
       </ion-card>
-      
+    </div>
 </ion-content>

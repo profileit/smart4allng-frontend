@@ -1,0 +1,75 @@
+
+.sf-newsfeed {
+    &__cards-container {
+        align-items: flex-start;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        padding-left: 2px;    
+    }
+    
+    &__card {
+        background-color: var(--sf-color-white);
+        border-radius: 1rem;
+        margin:0;
+        padding: 0;
+        width: calc(100%/3 - 1.5rem);
+        
+        ion-card-header {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+        }
+        
+        
+        &-avatar {
+            border: 4px solid var(--sf-color-tertiary);
+            border-radius: 60px;
+            height: 60px;
+            width: 60px;
+        }
+        
+        &-user {
+            padding: 0.5rem 0;
+            &-name {
+                font-family: 'Ubuntu-Bold';
+                margin: 0 0 0.25rem 0;
+             }
+             
+            &-position {
+               color: var(--sf-color-placeholder-grey);
+               margin: 0;
+            }
+        }
+        
+        ion-card-title {
+            color: var(--sf-color-title-grey);
+            margin-bottom: 1rem;
+        }
+        
+        &-img {
+            width: 100%;
+        }
+        
+        &-tag {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+        }
+        
+        &-social {
+            padding: 0.5rem;
+            
+            svg {
+                color: var(--sf-color-tertiary);
+                margin-right: 0.5rem;
+            }
+        }
+        
+        &-badges {
+            display: flex;
+            gap: 0.5rem;
+            padding: 0 1rem;
+        }
+    }
+}

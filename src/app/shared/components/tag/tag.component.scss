@@ -1,0 +1,28 @@
+.sf-tag {
+    border-radius: 20px;
+    color: var(--sf-color-white);
+    height: 20px;
+    line-height: 20px;
+    padding: 0 0.5rem;
+    
+    &.news {
+        background-color: var(--sf-color-secondary);
+    }
+    
+    &.primary {
+        background-color: var(--sf-color-tag-primary);
+    }
+    
+    &.secondary {
+        background-color: var(--sf-color-tag-secondary);
+    }
+    
+      
+    &.tertiary {
+        background-color: var(--sf-color-tag-tertiary);
+    }
+    
+    &.quaternary {
+        background-color: var(--sf-color-tag-quaternary);
+    }
+}

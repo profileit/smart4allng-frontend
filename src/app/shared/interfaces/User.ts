@@ -4,7 +4,7 @@ export interface User {
   role: string;
   avatar: string;
   company: string;
-  positon: string;
+  position: string;
 }
 
 // This is the interface that the API will return

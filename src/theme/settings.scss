@@ -16,18 +16,31 @@ $font-path: "../assets/fonts/";
 
 /*COLORS */
 
-$color-white: #fff;
-$color-primary: #022C4E;
-$color-secondary:  #EE9F2E;
-$color-tertiary:  #58C0D4;
+:root {
+  --ion-background-color: #F5FBFF;
+  --ion-text-color: #626463;
+  --ion-font-family: 'Ubuntu-Regular';
+  
+  --sf-color-white: #fff;
+  --sf-color-primary: #022C4E;
+  --sf-color-secondary:  #EE9F2E;
+  --sf-color-tertiary:  #58C0D4;
 
-$color-tag-primary: #0274B3;
-$color-tag-secondary: #CE542C;
-$color-tag-tertiary: #1A8289;
-$color-tag-quaternary: #41A0E5;
+  --sf-color-tag-primary: #0274B3;
+  --sf-color-tag-secondary: #CE542C;
+  --sf-color-tag-tertiary: #1A8289;
+  --sf-color-tag-quaternary: #41A0E5;
 
-$color-sidebar-bg: #EBF6FE;
-$color-user-bg: #EBF6FE;
-$color-button-outline: #3677A6;
+  --sf-color-sidebar-bg: #EBF6FE;
+  --sf-color-user-bg: #EBF6FE;
+  --sf-color-button-outline: #3677A6;
 
-$color-title-grey: #424150;
+  --sf-color-title-grey: #424150;
+  --sf-color-placeholder-grey: #959595;
+}
+
+
+$breakpoint-phone: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 992px;
+$breakpoint-desktop: 1200px;

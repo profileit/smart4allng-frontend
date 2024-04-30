@@ -1,15 +1,14 @@
 /*bloques concretos de nuestro documento, navegador, botones, recuadros de utilidades diversas, migas de pan, cabecera, buscador, botones sociales, etc.*/
 
 .sf-card {
-    background-color: $color-white;
-    box-shadow: 0 0 8px 0px #ccc;
+    background-color: var(--sgf-color-white);
+    box-shadow: 0 4px 4px 0px #0000001a;
     border-radius: 16px;
     padding: 24px;
-    margin-bottom: 40px;
+    margin: 0 2px 40px;
     
     ion-card-title {
-        color: $color-title-grey;
-        font-size: 22px;
+        color: var(--sf-color-title-grey);
         font-family: 'Ubuntu-Medium';
     }
 }

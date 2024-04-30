@@ -6,8 +6,8 @@ export const User1: User = {
   surname: 'Doe',
   role: 'CEO at Company',
   company: 'Profile',
-  positon: 'CEO',
-  avatar: '',
+  position: 'CEO',
+  avatar: '../../assets/images/user_default.jpg',
 };
 
 export const User2: User = {
@@ -15,8 +15,8 @@ export const User2: User = {
   surname: 'Doe',
   role: 'CTO at Company',
   company: 'Profile',
-  positon: 'CTO',
-  avatar: '',
+  position: 'CTO',
+  avatar: '../../assets/images/user_default.jpg',
 };
 
 export const User3: User = {
@@ -24,8 +24,8 @@ export const User3: User = {
   surname: 'Smith',
   role: 'Developer at Company',
   company: 'Profile',
-  positon: 'Frontend Developer',
-  avatar: '',
+  position: 'Frontend Developer',
+  avatar: '../../assets/images/user_default.jpg',
 };
 
 export const User4: User = {
@@ -33,8 +33,8 @@ export const User4: User = {
   surname: 'Smith',
   role: 'Developer at Company',
   company: 'Profile',
-  positon: 'Backend Developer',
-  avatar: '',
+  position: 'Backend Developer',
+  avatar: '../../assets/images/user_default.jpg',
 };
 
 export const User5: User = {
@@ -42,8 +42,8 @@ export const User5: User = {
   surname: 'Smith',
   role: 'Developer at Company',
   company: 'Smart4',
-  positon: 'Backend Developer',
-  avatar: '',
+  position: 'Backend Developer',
+  avatar: '../../assets/images/user_default.jpg',
 };
 
 export const mockedUserList: User[] = [User1, User2, User3, User4, User5];
